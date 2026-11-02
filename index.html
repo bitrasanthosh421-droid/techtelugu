@@ -32,6 +32,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+  <!-- Tech Telugu AI Assistant Widget Styles -->
+  <link rel="stylesheet" href="/ai-bot.css">
+
   <style>
     :root {
       --bg: #f8fafc;
@@ -1359,7 +1362,7 @@
                 <div class="video-thumb-overlay"></div>
                 <div class="video-play-btn">▶</div>
                 <span class="video-chip">Antigravity AI</span>
-                <span class="video-duration">5:20 min</span>
+                <span class="video-duration">1:21 min</span>
               </div>
               <div class="video-content">
                 <h4 class="video-card-title">How to Build Any Website or App Using Google Antigravity Prompts</h4>
@@ -2179,7 +2182,7 @@
       <!-- Responsive Video Player Container -->
       <div class="video-player-container" id="videoPlayerContainer">
         <video id="videoPlayerElement" class="video-player-element" controls playsinline preload="metadata">
-          <source src="final_output_2.mp4" type="video/mp4">
+          <source src="video_1.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -2425,12 +2428,15 @@
     let activeCategory = "all";
     let searchQuery = "";
 
-    // Video Tutorials Data for Students
+    // ==========================================
+    // 🎬 STUDENT VIDEO TUTORIALS CONFIGURATION
+    // You can paste ANY YouTube link, YouTube Video ID, Instagram Reel URL, or .mp4 file!
+    // ==========================================
     const STUDENT_VIDEOS = {
       "video-antigravity": {
         title: "How to Build Any Website or App Using Google Antigravity Prompts",
         badge: "Google Antigravity • Telugu & English",
-        videoSrc: "final_output_2.mp4",
+        videoSrc: "video_1.mp4",
         prompt: "Act as an expert full-stack developer. Create a modern, responsive web application for [insert idea, e.g. Student CGPA Calculator or Habit Tracker]. Include clean HTML5, modern CSS styling with dark/light mode toggle, and single-file executable vanilla JavaScript logic. Ensure 100% mobile responsiveness and clear user controls.",
         toolUrl: "google-antigravity.html",
         toolName: "Open Antigravity Guide & Templates"
@@ -2438,19 +2444,35 @@
       "video-chatgpt": {
         title: "ChatGPT & Gemini: Create Web Calculators, Tools & Mobile Pages",
         badge: "ChatGPT + Gemini • Zero Coding",
-        videoSrc: "final_output.mp4",
+        videoSrc: "https://www.youtube.com/watch?v=wuEYbt8KumA",
         prompt: "Act as a senior software engineer. I want to build a functional web utility [e.g. Student Task Manager or File Converter UI]. Write clean, semantic HTML5, modern CSS with card components, and robust JavaScript calculation logic. Provide full single-file code that I can save as index.html and run directly in any web browser.",
         toolUrl: "https://chatgpt.com/",
         toolName: "Open ChatGPT"
       }
     };
 
+    function parseVideoUrl(src) {
+      if (!src) return { type: "empty" };
+      src = String(src).trim();
+      const ytMatch = src.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+      if (ytMatch) {
+        return { type: "youtube", id: ytMatch[1], embedUrl: "https://www.youtube-nocookie.com/embed/" + ytMatch[1] + "?autoplay=1&rel=0" };
+      }
+      if (/^[a-zA-Z0-9_-]{11}$/.test(src)) {
+        return { type: "youtube", id: src, embedUrl: "https://www.youtube-nocookie.com/embed/" + src + "?autoplay=1&rel=0" };
+      }
+      if (src.includes("instagram.com")) {
+        return { type: "instagram", url: src };
+      }
+      return { type: "video", url: src };
+    }
+
     function openVideoModal(videoId) {
       const videoData = STUDENT_VIDEOS[videoId] || STUDENT_VIDEOS["video-antigravity"];
       const modal = document.getElementById("videoModal");
       const titleEl = document.getElementById("videoModalTitle");
       const badgeEl = document.getElementById("videoModalBadge");
-      const playerEl = document.getElementById("videoPlayerElement");
+      const containerEl = document.getElementById("videoPlayerContainer");
       const promptEl = document.getElementById("videoPromptText");
       const toolBtn = document.getElementById("videoLaunchToolBtn");
 
@@ -2463,10 +2485,60 @@
         if (span) span.textContent = videoData.toolName;
       }
 
-      if (playerEl) {
-        playerEl.src = videoData.videoSrc;
-        playerEl.load();
-        playerEl.play().catch(e => console.log("Auto-play prevented:", e));
+      if (containerEl) {
+        const parsed = parseVideoUrl(videoData.videoSrc);
+        if (parsed.type === "youtube") {
+          containerEl.innerHTML = `
+            <iframe class="video-player-element" 
+                    src="${parsed.embedUrl}" 
+                    title="${escapeHtml(videoData.title)}" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+            </iframe>
+          `;
+        } else if (parsed.type === "instagram") {
+          containerEl.innerHTML = `
+            <div style="width:100%;height:100%;background:#0f172a;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center">
+              <span style="font-size:36px;margin-bottom:8px">📸</span>
+              <h4 style="font-size:16px;color:#fff;margin-bottom:6px">Watch on Instagram Reels</h4>
+              <p style="font-size:12.5px;color:#94a3b8;max-width:380px;margin-bottom:14px">This tutorial is hosted on our official Instagram page. Click below to view the reel with original audio and comments.</p>
+              <a href="${parsed.url}" target="_blank" rel="noopener" class="btn-primary" style="width:auto;padding:9px 18px;display:inline-flex;align-items:center;gap:6px">
+                <span>Open Reel on Instagram ↗</span>
+              </a>
+            </div>
+          `;
+        } else {
+          // Local/Direct MP4 with smart fallback
+          containerEl.innerHTML = `
+            <video id="videoPlayerElement" class="video-player-element" controls playsinline autoplay preload="auto">
+              <source src="${parsed.url}" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+            <div id="videoErrorFallback" style="display:none;position:absolute;inset:0;background:#0f172a;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center">
+              <span style="font-size:32px;margin-bottom:8px">📺</span>
+              <h4 style="font-size:15px;color:#fff;margin-bottom:6px">Video File Not Found on Server</h4>
+              <p style="font-size:12px;color:#94a3b8;max-width:400px;margin-bottom:12px">The local video file (<code>${escapeHtml(parsed.url)}</code>) was not uploaded to the hosting repository, or your mobile browser cannot stream raw MP4.</p>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center">
+                <a href="https://www.youtube.com/watch?v=wuEYbt8KumA" target="_blank" rel="noopener" class="btn-primary" style="width:auto;padding:8px 14px;font-size:12px">
+                  ▶ Watch AI Coding Guide on YouTube ↗
+                </a>
+                <a href="${videoData.toolUrl}" class="btn-video-guide" style="font-size:12px">
+                  📖 Open Step-by-Step Guide
+                </a>
+              </div>
+            </div>
+          `;
+          const vid = containerEl.querySelector("video");
+          if (vid) {
+            vid.addEventListener("error", () => {
+              const fb = document.getElementById("videoErrorFallback");
+              if (fb) fb.style.display = "flex";
+              vid.style.display = "none";
+            });
+            vid.play().catch(e => console.log("Autoplay handled:", e));
+          }
+        }
       }
 
       if (modal) {
@@ -2477,10 +2549,9 @@
 
     function closeVideoModal() {
       const modal = document.getElementById("videoModal");
-      const playerEl = document.getElementById("videoPlayerElement");
-      if (playerEl) {
-        playerEl.pause();
-        playerEl.src = "";
+      const containerEl = document.getElementById("videoPlayerContainer");
+      if (containerEl) {
+        containerEl.innerHTML = "";
       }
       if (modal) {
         modal.style.display = "none";
@@ -2600,7 +2671,7 @@
                 <div class="video-thumb-overlay"></div>
                 <div class="video-play-btn">▶</div>
                 <span class="video-chip">Antigravity AI</span>
-                <span class="video-duration">5:20 min</span>
+                <span class="video-duration">1:21 min</span>
               </div>
               <div class="video-content">
                 <h4 class="video-card-title">How to Build Any Website or App Using Google Antigravity Prompts</h4>
@@ -3424,5 +3495,7 @@
     </div>
   </div>
 
+  <!-- Tech Telugu AI Assistant Bot Widget -->
+  <script src="/ai-bot.js" defer></script>
 </body>
 </html>
