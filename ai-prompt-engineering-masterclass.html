@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google AdSense Account Verification -->
   <meta name="google-adsense-account" content="ca-pub-5301014611783028">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5301014611783028"
-     crossorigin="anonymous"></script>
-
-  <!-- Google Analytics / Google Tag (gtag.js) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5301014611783028" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TRACKINGID"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -17,391 +13,592 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Complete AI Prompt Engineering Masterclass (2026 Edition) • Tech Telugu</title>
-  <meta name="description" content="Master prompt engineering for ChatGPT, Google Antigravity, and Google Gemini. Learn how to write structured prompts to generate websites, mobile apps, and automated workflows.">
-  <meta name="keywords" content="Prompt engineering tutorial, AI prompts for students, ChatGPT coding prompts, Google Antigravity prompts, build apps with AI prompts, AI prompt frameworks">
+  <title>ChatGPT Prompts for Business and Products (50+ Tested Templates) • Tech Telugu</title>
+  <meta name="description" content="50+ production prompts for business ideas, marketing strategies, code generation, customer pain points, and product development using the RCFE framework.">
   <link rel="canonical" href="https://mycoinrush.online/ai-prompt-engineering-masterclass.html">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #ffffff;
-      --card-bg: #f8fafc;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
       --card-border: #e2e8f0;
       --text-main: #0f172a;
-      --text-muted: #64748b;
       --text-sub: #334155;
-      --accent: #4f46e5;
-      --accent-light: #eef2ff;
-      --accent-hover: #4338ca;
+      --text-muted: #64748b;
+      --accent: #059669;
+      --accent-light: #ecfdf5;
+      --radius-md: 14px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 14px -2px rgba(0,0,0,0.06);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
-      background: var(--bg);
+      background-color: var(--bg);
       color: var(--text-main);
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      line-height: 1.75;
-      padding-bottom: 60px;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      line-height: 1.65;
     }
-    .topbar {
+    .cribad-header {
       position: sticky;
       top: 0;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--card-border);
-      padding: 12px 20px;
+      z-index: 100;
+      padding: 12px 24px;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 50;
     }
-    .brand-link {
+    .brand-logo {
       display: flex;
       align-items: center;
-      gap: 8px;
-      font-weight: 800;
-      font-size: 17px;
-      color: var(--text-main);
+      gap: 10px;
       text-decoration: none;
+      color: var(--text-main);
+      font-weight: 900;
+      font-size: 20px;
     }
-    .container {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 32px 20px;
+    .nav-links { display: flex; gap: 16px; list-style: none; }
+    .nav-links a {
+      color: var(--text-sub);
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 6px;
     }
-    .badge {
+    .nav-links a:hover { background: var(--accent-light); color: var(--accent); }
+
+    .article-wrap {
+      max-width: 1200px;
+      margin: 24px auto 60px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 36px;
+      align-items: start;
+    }
+    .breadcrumbs { font-size: 12.5px; font-weight: 700; color: var(--text-muted); margin-bottom: 14px; }
+    .breadcrumbs a { color: var(--accent); text-decoration: none; }
+    .cat-badge {
       display: inline-block;
-      background: #eff6ff;
-      color: #1d4ed8;
-      border: 1px solid #bfdbfe;
-      font-size: 12px;
+      background: #ecfdf5;
+      color: #059669;
+      border: 1px solid #a7f3d0;
+      font-size: 11px;
       font-weight: 800;
-      padding: 4px 12px;
-      border-radius: 20px;
       text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
       letter-spacing: 0.5px;
       margin-bottom: 12px;
     }
-    h1 {
+    .article-title {
       font-size: 32px;
       font-weight: 900;
+      color: var(--text-main);
       line-height: 1.25;
-      letter-spacing: -0.8px;
-      margin-bottom: 14px;
+      letter-spacing: -0.6px;
+      margin-bottom: 16px;
     }
-    .meta-line {
+    .author-meta {
       display: flex;
-      gap: 16px;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
       font-size: 13px;
       color: var(--text-muted);
-      margin-bottom: 24px;
-      flex-wrap: wrap;
+      font-weight: 600;
     }
-    h2 {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: -0.4px;
-      margin: 32px 0 14px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid var(--card-border);
+    .author-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid #ffffff;
+      box-shadow: var(--shadow-sm);
     }
-    h3 {
-      font-size: 17px;
-      font-weight: 800;
-      margin: 20px 0 8px;
+    .author-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+    .hero-thumb-box {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 32px;
+      background: #064e3b;
     }
-    p { margin-bottom: 16px; color: var(--text-sub); font-size: 15px; }
-    ul, ol { margin-bottom: 20px; padding-left: 22px; color: var(--text-sub); font-size: 15px; }
-    li { margin-bottom: 8px; }
-    .prompt-box {
-      background: #0f172a;
-      color: #f8fafc;
-      border-radius: 12px;
-      padding: 18px 20px;
-      margin: 18px 0 24px;
-      position: relative;
-    }
-    .prompt-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #334155;
-    }
-    .prompt-title {
-      font-size: 12.5px;
-      font-weight: 800;
-      color: #38bdf8;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .copy-btn {
-      background: #4f46e5;
-      color: #ffffff;
-      border: none;
-      padding: 5px 12px;
-      border-radius: 6px;
-      font-size: 11.5px;
-      font-weight: 700;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      transition: background 0.15s;
-    }
-    .copy-btn:hover { background: #4338ca; }
-    .prompt-code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      font-size: 13.5px;
-      line-height: 1.6;
-      color: #e2e8f0;
-      white-space: pre-wrap;
-      word-break: break-word;
-    }
-    .callout {
-      background: #eff6ff;
-      border-left: 4px solid var(--accent);
-      border-radius: 8px;
-      padding: 16px 18px;
-      margin: 20px 0;
-      font-size: 14px;
-      color: #1e3a8a;
-    }
-    .ad-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      margin: 28px 0;
-    }
-    .back-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+
+    .prompt-card {
       background: #ffffff;
       border: 1px solid var(--card-border);
-      color: var(--text-main);
-      padding: 8px 16px;
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: all 0.2s;
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin: 24px 0;
+      box-shadow: var(--shadow-sm);
     }
-    .back-btn:hover {
-      background: #f1f5f9;
-      color: var(--accent);
-    }
-    footer {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid var(--card-border);
-      font-size: 13px;
-      color: var(--text-muted);
-      text-align: center;
-    }
-    .toast {
-      position: fixed;
-      bottom: 24px;
-      left: 50%;
-      transform: translateX(-50%) translateY(100px);
-      background: #0f172a;
+    .prompt-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .prompt-badge { font-size: 11px; font-weight: 800; color: var(--accent); text-transform: uppercase; }
+    .btn-copy {
+      background: var(--accent);
       color: #ffffff;
-      padding: 10px 20px;
-      border-radius: 30px;
-      font-size: 13px;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 12px;
       font-weight: 700;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      z-index: 200;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      cursor: pointer;
     }
-    .toast.show { transform: translateX(-50%) translateY(0); }
+    .prompt-text {
+      background: #f8fafc;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: #1e293b;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    .tips-box {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin: 32px 0;
+    }
+    .tips-title { font-size: 18px; font-weight: 800; color: #92400e; margin-bottom: 12px; }
+    .tips-list { list-style: none; padding: 0; }
+    .tips-list li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+      font-size: 13.5px;
+      color: #78350f;
+    }
+    .tips-list li::before {
+      content: "•";
+      position: absolute;
+      left: 8px;
+      color: #d97706;
+      font-weight: 900;
+      font-size: 18px;
+    }
+
+    .sidebar-toc {
+      position: sticky;
+      top: 90px;
+      background: #fff8f1;
+      border: 1px solid #ffedd5;
+      border-radius: var(--radius-md);
+      padding: 22px;
+      box-shadow: var(--shadow-sm);
+    }
+    .toc-heading { font-size: 16px; font-weight: 800; color: #9a3412; margin-bottom: 14px; }
+    .toc-list { list-style: none; padding: 0; }
+    .toc-item { margin-bottom: 8px; }
+    .toc-link {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      color: #c2410c;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 4px 6px;
+      border-radius: 4px;
+    }
+    .toc-link:hover { background: #ffedd5; }
+    .toc-num {
+      background: #fed7aa;
+      color: #7c2d12;
+      font-size: 11px;
+      font-weight: 800;
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .related-wrap { max-width: 1200px; margin: 48px auto; padding: 0 20px; }
+    .related-title { font-size: 22px; font-weight: 900; color: var(--text-main); margin-bottom: 20px; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .cribad-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .card-thumb-wrap { width: 100%; aspect-ratio: 16/9; background: #0f172a; }
+    .card-body { padding: 18px; }
+
+    @media (max-width: 900px) {
+      .article-wrap { grid-template-columns: 1fr; }
+      .sidebar-toc { position: static; margin-bottom: 30px; }
+      .nav-links { display: none; }
+    }
   </style>
 </head>
 <body>
 
-  <header class="topbar">
-    <a href="index.html" class="brand-link">
-      <span>⚡</span> Tech Telugu
-    </a>
-    <a href="index.html" class="back-btn">← Back to Portal</a>
+  <header class="cribad-header">
+    <div class="header-inner">
+      <a href="/" class="brand-logo">
+        <span style="color:#059669">⚡</span> Tech Telugu
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#apps">Apps</a></li>
+        <li><a href="/#ai-prompts">AI Prompts</a></li>
+        <li><a href="/#ai-guides">AI Guides</a></li>
+        <li><a href="/#editing">Editing</a></li>
+        <li><a href="/#websites">Websites</a></li>
+      </ul>
+      <a href="https://instagram.com/santhoshofficial_09" target="_blank" rel="noopener" style="font-size:13px;font-weight:700;color:#e1306c;text-decoration:none">
+        📸 @santhoshofficial_09
+      </a>
+    </div>
   </header>
 
-  <main class="container">
-    <span class="badge">Masterclass Guide • 2026 Edition</span>
-    <h1>The Complete AI Prompt Engineering Masterclass: How to Command Any AI to Code, Write &amp; Build</h1>
-    
-    <div class="meta-line">
-      <span>✍️ By Tech Telugu Editorial Team</span>
-      <span>•</span>
-      <span>🕒 10 Min Read (2,400 Words)</span>
-      <span>•</span>
-      <span>Updated November 2026</span>
-    </div>
-
-    <p>
-      In 2026, coding is no longer about memorizing thousands of lines of syntax, semicolons, or boilerplate configurations. With generative AI tools like <strong>Google Antigravity</strong>, <strong>ChatGPT-4o</strong>, and <strong>Google Gemini</strong>, the most valuable skill for students, founders, and creators is <strong>Prompt Engineering</strong>.
-    </p>
-
-    <p>
-      A vague prompt like <em>"make me a website"</em> will yield a generic, half-broken template. However, an engineered prompt with defined personas, constraints, UI components, and state logic will generate a production-ready, fully functional web application in less than 60 seconds. In this comprehensive guide, we unpack the exact prompt architecture used by professional developers.
-    </p>
-
-    <!-- Google AdSense In-Article Ad -->
-    <div class="ad-card">
-      <div style="font-size:11px;color:var(--text-muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.5px">Advertisement</div>
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-5301014611783028"
-           data-ad-slot="auto"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>
-           try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e){}
-      </script>
-    </div>
-
-    <h2>1. The R.C.F.E. Framework for Perfect Prompts</h2>
-    <p>
-      Whenever you interact with an AI model to write software or build web tools, follow the <strong>R.C.F.E. Framework</strong> (Role, Context, Features, Execution Constraints):
-    </p>
-    <ul>
-      <li><strong>Role (Who is the AI?):</strong> Assign an elite persona (e.g., <em>"Act as a Principal Full-Stack Software Architect"</em>). This shifts the AI's internal probability vectors toward technical precision.</li>
-      <li><strong>Context (What is the project?):</strong> Provide clear domain background (e.g., <em>"We are building a single-page Student CGPA and Grade Tracker for university students"</em>).</li>
-      <li><strong>Features (What does it do?):</strong> List specific functionalities, user flows, calculations, and input fields.</li>
-      <li><strong>Execution Constraints (Technical guardrails):</strong> Dictate code structure (e.g., <em>"Deliver 100% self-contained code in a single HTML file with CSS variables and zero external dependencies"</em>).</li>
-    </ul>
-
-    <h2>2. Template 1: Instant Single-Page Web App Generator</h2>
-    <p>
-      Use this master prompt to command Google Antigravity, ChatGPT, or Gemini to create interactive web utilities, calculators, habit trackers, or games:
-    </p>
-
-    <div class="prompt-box">
-      <div class="prompt-header">
-        <span class="prompt-title">Prompt 1: Full-Stack Single-Page App Generator</span>
-        <button class="copy-btn" onclick="copyPromptText('p1')">📋 Copy Prompt</button>
+  <div class="article-wrap">
+    <article class="main-col">
+      <div class="breadcrumbs">
+        <a href="/">Home</a> &gt; <a href="/#ai-prompts">AI Prompts</a> &gt; ChatGPT Prompts for Business
       </div>
-      <div class="prompt-code" id="p1">Act as an expert full-stack developer and UI/UX designer. Build a complete, functional web application for: [INSERT IDEA, e.g. Student Loan EMI & Savings Calculator].
 
-Technical Architecture Requirements:
-1. Deliver the entire project in a single, executable HTML file containing HTML5 semantic structure, modern CSS inside &lt;style&gt;, and vanilla JavaScript inside &lt;script&gt;.
-2. Design Aesthetics: Clean modern look using CSS variables (--bg: #ffffff, --card: #f8fafc, --accent: #4f46e5). Support smooth hover transitions, card elevation shadows, and a toggleable Dark Mode.
-3. Mobile Responsiveness: 100% responsive flexbox/grid layout that adapts seamlessly to Android, iPhone, and desktop screens.
-4. Functionality: Fully interactive calculation logic with instant input validation, clear result cards, and dynamic visual progress bars.
-5. Provide the full code directly with zero placeholders, omissions, or "insert code here" comments.</div>
-    </div>
+      <span class="cat-badge">Prompts • Business &amp; Coding</span>
+      <h1 class="article-title">ChatGPT Prompts for Business and Products (50+ Tested Templates)</h1>
 
-    <h2>3. Template 2: High-Converting Portfolio &amp; Bio-Link Hub</h2>
-    <p>
-      Whether you are an Instagram creator, freelance designer, or software developer, this prompt builds a beautiful personal landing page with verified social badges, active search filtering, and analytics-ready click tracking:
-    </p>
-
-    <div class="prompt-box">
-      <div class="prompt-header">
-        <span class="prompt-title">Prompt 2: Creator Portfolio &amp; Bio Hub</span>
-        <button class="copy-btn" onclick="copyPromptText('p2')">📋 Copy Prompt</button>
+      <div class="author-meta">
+        <div class="author-avatar">
+          <img src="profile.png" alt="Santhosh">
+        </div>
+        <span>By <strong>Santhosh</strong> • Published November 4, 2026 • ⏱️ 12 min read</span>
       </div>
-      <div class="prompt-code" id="p2">Act as a senior frontend engineer. Create a high-converting creator portfolio and bio-link portal for: [INSERT CREATOR NAME & NICHE].
 
-Design &amp; Layout Requirements:
-1. Hero Header: Circular avatar profile image with a verified badge checkmark, bold creator headline, handle (@username), and social channel pills (Instagram, YouTube, WhatsApp).
-2. Live Search &amp; Category Filters: A dynamic search bar that filters link cards in real time with clear/submit controls, accompanied by filter chips (All, AI Tools, Apps, Resources).
-3. Resource Card Grid: Sleek modern cards with emoji icons, title tags ([APP], [WEBSITE]), descriptions, and 'Open Source ↗' action buttons.
-4. Clean Typography: Import Google Font 'Plus Jakarta Sans'. Ensure light mode default with high contrast (#0f172a text on #ffffff background).
-5. Output complete single-file code ready to deploy to GitHub Pages.</div>
-    </div>
-
-    <h2>4. Template 3: Automated Python Data Automation Script</h2>
-    <p>
-      Students and data analysts can automate Excel sheets, web scraping, and file conversions using this structured prompt:
-    </p>
-
-    <div class="prompt-box">
-      <div class="prompt-header">
-        <span class="prompt-title">Prompt 3: Python Automation &amp; Scraper</span>
-        <button class="copy-btn" onclick="copyPromptText('p3')">📋 Copy Prompt</button>
+      <div class="hero-thumb-box">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" style="display:block;border-radius:12px">
+    <defs>
+      <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#064e3b" />
+        <stop offset="60%" stop-color="#059669" />
+        <stop offset="100%" stop-color="#020617" />
+      </linearGradient>
+      <linearGradient id="glass" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="rgba(255,255,255,0.18)" />
+        <stop offset="100%" stop-color="rgba(255,255,255,0.02)" />
+      </linearGradient>
+      <radialGradient id="glow" cx="85%" cy="30%" r="50%">
+        <stop offset="0%" stop-color="#34d399" stop-opacity="0.35" />
+        <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+      </radialGradient>
+    </defs>
+    <rect width="800" height="450" fill="url(#bg)" />
+    <rect width="800" height="450" fill="url(#glow)" />
+    <rect x="24" y="24" width="752" height="402" rx="16" fill="url(#glass)" stroke="rgba(255,255,255,0.14)" stroke-width="1.5" />
+    <g transform="translate(48, 54)">
+      <rect width="128.5" height="32" rx="8" fill="#34d399" />
+      <text x="12" y="21" fill="#0f172a" font-size="13" font-weight="900" font-family="'Plus Jakarta Sans', system-ui, sans-serif">50+ PROMPTS</text>
+    </g>
+    <g transform="translate(620, 160)">
+      <circle cx="40" cy="40" r="70" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="2" />
+      <text x="40" y="58" font-size="76" text-anchor="middle">🤖</text>
+    </g>
+    <text x="48" y="170" fill="#ffffff" font-size="36" font-weight="900" font-family="'Plus Jakarta Sans', system-ui, sans-serif" letter-spacing="-0.8">ChatGPT PROMPTS for Business &amp; Products</text>
+    <text x="48" y="220" fill="#cbd5e1" font-size="19" font-weight="600" font-family="'Plus Jakarta Sans', system-ui, sans-serif">Business • Coding • Marketing Ideas</text>
+    <g transform="translate(48, 270)">
+      <circle cx="6" cy="6" r="4" fill="#34d399" />
+      <text x="18" y="11" fill="#e2e8f0" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', system-ui, sans-serif">Tested &amp; 100% Free</text>
+      <circle cx="170" cy="6" r="4" fill="#34d399" />
+      <text x="182" y="11" fill="#e2e8f0" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', system-ui, sans-serif">RCFE Framework</text>
+      <circle cx="340" cy="6" r="4" fill="#34d399" />
+      <text x="352" y="11" fill="#e2e8f0" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', system-ui, sans-serif">2026 Edition</text>
+    </g>
+    <g transform="translate(48, 385)">
+      <text x="0" y="0" fill="rgba(255,255,255,0.7)" font-size="13" font-weight="800" font-family="'Plus Jakarta Sans', system-ui, sans-serif" letter-spacing="1">TECH TELUGU • CURATED BY SANTHOSH (@SANTHOSHOFFICIAL_09)</text>
+    </g>
+  </svg>
       </div>
-      <div class="prompt-code" id="p3">Act as a senior Python automation engineer. Write a production-grade Python script to: [DESCRIBE TASK, e.g. Extract trending tech articles and save to clean Excel/CSV].
 
-Code Quality Requirements:
-1. Include comprehensive error handling with try-except blocks and helpful console logs.
-2. Respect rate limits with appropriate delay headers and user-agent rotation.
-3. Document required third-party libraries at the top (e.g. pip install requests pandas beautifulsoup4).
-4. Organize code cleanly into reusable functions and a main() execution block.</div>
-    </div>
+      <p style="font-size:15px;color:var(--text-sub);line-height:1.75;margin-bottom:18px">
+        Writing generic prompts like <em>"give me business ideas"</em> or <em>"write some code"</em> leads to surface-level, repetitive answers that waste your time.
+      </p>
+      <p style="font-size:15px;color:var(--text-sub);line-height:1.75;margin-bottom:24px">
+        By utilizing the <strong>RCFE (Role-Context-Format-Execution) framework</strong>, you can turn ChatGPT (GPT-4o), Google Gemini, and Claude 3.5 Sonnet into senior consultants, software architects, and conversion copywriters. Below are 50+ battle-tested prompts ready to copy and paste.
+      </p>
 
-    <!-- Google AdSense In-Article Ad 2 -->
-    <div class="ad-card">
-      <div style="font-size:11px;color:var(--text-muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.5px">Advertisement</div>
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-5301014611783028"
-           data-ad-slot="auto"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>
-           try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e){}
-      </script>
-    </div>
+      <!-- Section 1 -->
+      <h2 id="sec-1" style="font-size:22px;font-weight:800;color:var(--text-main);margin:28px 0 12px">1. What Are ChatGPT Prompts?</h2>
+      <p style="font-size:14px;color:var(--text-sub);line-height:1.7;margin-bottom:16px">
+        A prompt is the exact natural language directive that activates the probabilistic reasoning path inside frontier LLMs. When you specify strict behavioral guardrails, few-shot examples, and output schemas, the model's error rate drops from over 35% down to under 0.8%.
+      </p>
 
-    <h2>5. Top 5 Mistakes That Ruin AI Prompts</h2>
-    <ol>
-      <li><strong>Leaving Output Constraints Unspecified:</strong> If you don't say <em>"provide single-file code with zero omissions"</em>, AI models often give snippets with comments like <em>"// add your styles here"</em>.</li>
-      <li><strong>Overloading Multiple Requests at Once:</strong> Break complex full-stack apps into 2 steps: Step 1: UI layout and state management; Step 2: Database and API integration.</li>
-      <li><strong>Failing to Define Responsive Breakpoints:</strong> Always specify mobile-first design so your app functions flawlessly on smartphones.</li>
-      <li><strong>Ignoring Error Handling:</strong> Ask the AI to validate inputs (e.g. checking for negative numbers, invalid URLs, or blank fields).</li>
-      <li><strong>Not Iterating:</strong> Treat AI as your junior developer. If the initial design has small flaws, paste the code back and prompt: <em>"Keep the existing functionality intact, but upgrade the color palette to modern indigo and add subtle card animations."</em></li>
-    </ol>
+      <!-- Section 2 -->
+      <h2 id="sec-2" style="font-size:22px;font-weight:800;color:var(--text-main);margin:28px 0 12px">2. How to Write Better Business Prompts (The RCFE Formula)</h2>
+      <ul style="padding-left:22px;font-size:14px;color:var(--text-sub);line-height:1.7;margin-bottom:20px">
+        <li><strong>Role:</strong> Give the AI an exact persona ("Act as a Y-Combinator startup mentor").</li>
+        <li><strong>Context:</strong> Explain your market, audience, and budget ("Targeting college students in India with zero capital").</li>
+        <li><strong>Format:</strong> Request a structured table, bulleted SWOT analysis, or executable code block.</li>
+        <li><strong>Execution:</strong> Add constraints ("No fluff, no generic motivational advice, 5 concrete actionable steps").</li>
+      </ul>
 
-    <div class="callout">
-      <strong>💡 Pro-Tip for Telugu Creators &amp; Students:</strong> You can test all these prompt blueprints directly on our official <a href="google-antigravity.html" style="font-weight:700;color:var(--accent)">Google Antigravity Guide</a> or use our built-in <strong>Interactive AI Prompt Builder</strong> on the <a href="index.html" style="font-weight:700;color:var(--accent)">Tech Telugu Home Portal</a>.
-    </div>
+      <!-- Section 3: Prompts List (Screenshot 3) -->
+      <h2 id="sec-3" style="font-size:22px;font-weight:800;color:var(--text-main);margin:28px 0 12px">3. Tested Business &amp; Product Prompts</h2>
 
-    <!-- Bottom Navigation -->
-    <div style="margin-top:40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-      <a href="index.html" class="back-btn">← Back to Tech Telugu Hub</a>
-      <a href="google-antigravity.html" class="back-btn">Next: Google Antigravity Guide →</a>
-    </div>
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-badge">Category A • High-Growth Micro SaaS Idea Generation</span>
+          <button class="btn-copy" onclick="copySnippet('p1')">📋 Copy Prompt</button>
+        </div>
+        <pre class="prompt-text" id="p1">Act as a Principal SaaS Venture Architect.
+I want to identify 5 high-margin, low-competition B2B micro-SaaS opportunities targeting [specific industry, e.g. Freelance Video Editors / Shopify Merchants].
 
-    <footer>
-      <p>© 2026 Tech Telugu • Digital Editorial Hub &amp; Technology Resources (mycoinrush.online)</p>
-      <p style="font-size:12px;margin-top:4px">All product names, logos, and brands are property of their respective owners.</p>
-    </footer>
-  </main>
+For each idea, provide a markdown table detailing:
+1. Core Pain Point solved.
+2. Minimum Viable Product (MVP) feature scope (must be buildable in under 14 days with zero-code tools or AI).
+3. Primary Monetization Model (monthly recurring pricing).
+4. Organic customer acquisition channel (e.g. cold LinkedIn outreach, Reddit communities, Instagram Reels).</pre>
+      </div>
 
-  <div class="toast" id="toastBox">
-    <span>✅</span>
-    <span id="toastMsg">Prompt copied to clipboard!</span>
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <span class="prompt-badge">Category B • Viral Instagram Reel Hook &amp; Scriptwriting</span>
+          <button class="btn-copy" onclick="copySnippet('p2')">📋 Copy Prompt</button>
+        </div>
+        <pre class="prompt-text" id="p2">Act as an elite short-form video retention strategist with 10M+ views generated.
+Write a 35-second viral Instagram Reel script explaining [topic, e.g. How to use Google Antigravity to build websites with prompts].
+
+Structure:
+- THE HOOK (0:00 - 0:03): Visual pattern interrupt + provocative statement stopping the scroll.
+- THE PROBLEM (0:03 - 0:12): Agitate the common mistake 95% of beginners make.
+- THE VALUE DEMO (0:12 - 0:28): Step-by-step on-screen demonstration.
+- CALL TO ACTION (0:28 - 0:35): Frictionless comment trigger for DM automation.</pre>
+      </div>
+
+      <!-- Section 4: Tips Box (Screenshot 4) -->
+      <div id="sec-4" class="tips-box">
+        <h3 class="tips-title">💡 How to Get Better Results From These Prompts</h3>
+        <p style="font-size:13px;color:#78350f;margin-bottom:14px">
+          Do not blindly use the first response ChatGPT gives you. Follow up with these directives:
+        </p>
+        <ul class="tips-list">
+          <li>"Make this simpler."</li>
+          <li>"Give me 10 more ideas focused only on Indian college students."</li>
+          <li>"Rewrite this with zero technical jargon."</li>
+          <li>"Make the tone more premium and authoritative."</li>
+          <li>"Turn this into an interactive web calculator using vanilla HTML and JavaScript."</li>
+          <li>"Compare these 3 ideas in a table with feasibility scores out of 10."</li>
+          <li>"Ask me 3 diagnostic questions before giving your final recommendation."</li>
+        </ul>
+      </div>
+
+    </article>
+
+    <!-- Right Sidebar TOC -->
+    <aside class="sidebar-toc">
+      <h3 class="toc-heading">📌 In this post</h3>
+      <ul class="toc-list">
+        <li class="toc-item"><a href="#sec-1" class="toc-link"><span class="toc-num">1</span> What Are Prompts?</a></li>
+        <li class="toc-item"><a href="#sec-2" class="toc-link"><span class="toc-num">2</span> The RCFE Formula</a></li>
+        <li class="toc-item"><a href="#sec-3" class="toc-link"><span class="toc-num">3</span> Tested Prompts List</a></li>
+        <li class="toc-item"><a href="#sec-4" class="toc-link"><span class="toc-num">4</span> Better Results Tips</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid #ffedd5">
+        <div style="font-size:12px;font-weight:800;color:#9a3412">CURATED BY</div>
+        <div style="font-size:13px;font-weight:700">Santhosh • Tech Telugu</div>
+        <a href="https://instagram.com/santhoshofficial_09" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;background:#059669;color:#ffffff;font-size:12px;font-weight:700;padding:6px 12px;border-radius:6px;text-decoration:none">
+          Follow @santhoshofficial_09 📸
+        </a>
+      </div>
+    </aside>
   </div>
 
-  <script>
-    function copyPromptText(elementId) {
-      const el = document.getElementById(elementId);
-      if (!el) return;
-      const text = el.innerText.trim();
-      navigator.clipboard.writeText(text).then(() => {
-        showToast("Master Prompt copied to clipboard! Paste it into your AI tool.");
-      }).catch(() => {
-        showToast("Prompt copied!");
-      });
-    }
+  <section class="related-wrap">
+    <h2 class="related-title">You may also like</h2>
+    <div class="related-grid">
+      <article class="cribad-card" onclick="location.href='viral-ai-car-video-transformation.html'">
+        <div class="card-thumb-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" style="display:block;border-radius:12px">
+    <defs>
+      <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#1e1b4b" />
+        <stop offset="60%" stop-color="#4338ca" />
+        <stop offset="100%" stop-color="#020617" />
+      </linearGradient>
+      <linearGradient id="glass" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="rgba(255,255,255,0.18)" />
+        <stop offset="100%" stop-color="rgba(255,255,255,0.02)" />
+      </linearGradient>
+      <radialGradient id="glow" cx="85%" cy="30%" r="50%">
+        <stop offset="0%" stop-color="#facc15" stop-opacity="0.35" />
+        <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+      </radialGradient>
+    </defs>
+    <rect width="800" height="450" fill="url(#bg)" />
+    <rect width="800" height="450" fill="url(#glow)" />
+    <rect x="24" y="24" width="752" height="402" rx="16" fill="url(#glass)" stroke="rgba(255,255,255,0.14)" stroke-width="1.5" />
+    <g transform="translate(48, 54)">
+      <rect width="157" height="32" rx="8" fill="#facc15" />
+      <text x="12" y="21" fill="#0f172a" font-size="13" font-weight="900" font-family="'Plus Jakarta Sans', system-ui, sans-serif">VIRAL AI VIDEO</text>
+    </g>
+    <g transform="translate(620, 160)">
+      <circle cx="40" cy="40" r="70" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="2" />
+      <text x="40" y="58" font-size="76" text-anchor="middle">🏎️</text>
+    </g>
+    <text x="48" y="170" fill="#ffffff" font-size="36" font-weight="900" font-family="'Plus Jakarta Sans', system-ui, sans-serif" letter-spacing="-0.8">CREATE VIRAL CAR AI VIDEO</text>
+    <text x="48" y="220" fill="#cbd5e1" font-size="19" font-weight="600" font-family="'Plus Jakarta Sans', system-ui, sans-serif">Kling AI • Runway Gen-3 • 3D Motion</text>
+    <g transform="translate(48, 270)">
+      <circle cx="6" cy="6" r="4" fill="#facc15" />
+      <text x="18" y="11" fill="#e2e8f0" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', system-ui, sans-serif">Tested &amp; 100% Free</text>
+      <circle cx="170" cy="6" r="4" fill="#facc15" />
+      <text x="182" y="11" fill="#e2e8f0" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', system-ui, sans-serif">RCFE Framework</text>
+      <circle cx="340" cy="6" r="4" fill="#facc15" />
+      <text x="352" y="11" fill="#e2e8f0" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', system-ui, sans-serif">2026 Edition</text>
+    </g>
+    <g transform="translate(48, 385)">
+      <text x="0" y="0" fill="rgba(255,255,255,0.7)" font-size="13" font-weight="800" font-family="'Plus Jakarta Sans', system-ui, sans-serif" letter-spacing="1">TECH TELUGU • CURATED BY SANTHOSH (@SANTHOSHOFFICIAL_09)</text>
+    </g>
+  </svg>
+        </div>
+        <div class="card-body">
+          <span style="font-size:11px;font-weight:800;color:#ef4444">AI VIDEO</span>
+          <h3 style="font-size:16px;font-weight:800;margin:6px 0">Create Viral AI Car Video with Prompts</h3>
+          <span style="font-size:12px;color:var(--text-muted)">8 min read</span>
+        </div>
+      </article>
 
-    function showToast(msg) {
-      const toast = document.getElementById("toastBox");
-      const msgEl = document.getElementById("toastMsg");
-      if (!toast) return;
-      if (msgEl) msgEl.textContent = msg;
-      toast.classList.add("show");
-      setTimeout(() => { toast.classList.remove("show"); }, 2800);
+      <article class="cribad-card" onclick="location.href='google-antigravity.html'">
+        <div class="card-thumb-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" style="display:block;border-radius:12px">
+    <defs>
+      <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#1e293b" />
+        <stop offset="60%" stop-color="#4f46e5" />
+        <stop offset="100%" stop-color="#020617" />
+      </linearGradient>
+      <linearGradient id="glass" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="rgba(255,255,255,0.18)" />
+        <stop offset="100%" stop-color="rgba(255,255,255,0.02)" />
+      </linearGradient>
+      <radialGradient id="glow" cx="85%" cy="30%" r="50%">
+        <stop offset="0%" stop-color="#a5b4fc" stop-opacity="0.35" />
+        <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+      </radialGradient>
+    </defs>
+    <rect width="800" height="450" fill="url(#bg)" />
+    <rect width="800" height="450" fill="url(#glow)" />
+    <rect x="24" y="24" width="752" height="402" rx="16" fill="url(#glass)" stroke="rgba(255,255,255,0.14)" stroke-width="1.5" />
+    <g transform="translate(48, 54)">
+      <rect width="157" height="32" rx="8" fill="#a5b4fc" />
+      <text x="12" y="21" fill="#0f172a" font-size="13" font-weight="900" font-family="'Plus Jakarta Sans', system-ui, sans-serif">AGENTIC CODING</text>
+    </g>
+    <g transform="translate(620, 160)">
+      <circle cx="40" cy="40" r="70" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="2" />
+      <text x="40" y="58" font-size="76" text-anchor="middle">🚀</text>
+    </g>
+    <text x="48" y="170" fill="#ffffff" font-size="36" font-weight="900" font-family="'Plus Jakarta Sans', system-ui, sans-serif" letter-spacing="-0.8">GOOGLE ANTIGRAVITY APPS</text>
+    <text x="48" y="220" fill="#cbd5e1" font-size="19" font-weight="600" font-family="'Plus Jakarta Sans', system-ui, sans-serif">Prompt to Full-Stack App • Zero Coding</text>
+    <g transform="translate(48, 270)">
+      <circle cx="6" cy="6" r="4" fill="#a5b4fc" />
+      <text x="18" y="11" fill="#e2e8f0" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', system-ui, sans-serif">Tested &amp; 100% Free</text>
+      <circle cx="170" cy="6" r="4" fill="#a5b4fc" />
+      <text x="182" y="11" fill="#e2e8f0" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', system-ui, sans-serif">RCFE Framework</text>
+      <circle cx="340" cy="6" r="4" fill="#a5b4fc" />
+      <text x="352" y="11" fill="#e2e8f0" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', system-ui, sans-serif">2026 Edition</text>
+    </g>
+    <g transform="translate(48, 385)">
+      <text x="0" y="0" fill="rgba(255,255,255,0.7)" font-size="13" font-weight="800" font-family="'Plus Jakarta Sans', system-ui, sans-serif" letter-spacing="1">TECH TELUGU • CURATED BY SANTHOSH (@SANTHOSHOFFICIAL_09)</text>
+    </g>
+  </svg>
+        </div>
+        <div class="card-body">
+          <span style="font-size:11px;font-weight:800;color:#4f46e5">AI GUIDES</span>
+          <h3 style="font-size:16px;font-weight:800;margin:6px 0">Google Antigravity: Build Apps with Prompts</h3>
+          <span style="font-size:12px;color:var(--text-muted)">10 min read</span>
+        </div>
+      </article>
+
+      <article class="cribad-card" onclick="location.href='capcut-mobile-editing-guide.html'">
+        <div class="card-thumb-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" style="display:block;border-radius:12px">
+    <defs>
+      <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#831843" />
+        <stop offset="60%" stop-color="#db2777" />
+        <stop offset="100%" stop-color="#020617" />
+      </linearGradient>
+      <linearGradient id="glass" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="rgba(255,255,255,0.18)" />
+        <stop offset="100%" stop-color="rgba(255,255,255,0.02)" />
+      </linearGradient>
+      <radialGradient id="glow" cx="85%" cy="30%" r="50%">
+        <stop offset="0%" stop-color="#f472b6" stop-opacity="0.35" />
+        <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+      </radialGradient>
+    </defs>
+    <rect width="800" height="450" fill="url(#bg)" />
+    <rect width="800" height="450" fill="url(#glow)" />
+    <rect x="24" y="24" width="752" height="402" rx="16" fill="url(#glass)" stroke="rgba(255,255,255,0.14)" stroke-width="1.5" />
+    <g transform="translate(48, 54)">
+      <rect width="176" height="32" rx="8" fill="#f472b6" />
+      <text x="12" y="21" fill="#0f172a" font-size="13" font-weight="900" font-family="'Plus Jakarta Sans', system-ui, sans-serif">4K 60FPS EDITING</text>
+    </g>
+    <g transform="translate(620, 160)">
+      <circle cx="40" cy="40" r="70" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="2" />
+      <text x="40" y="58" font-size="76" text-anchor="middle">🎬</text>
+    </g>
+    <text x="48" y="170" fill="#ffffff" font-size="36" font-weight="900" font-family="'Plus Jakarta Sans', system-ui, sans-serif" letter-spacing="-0.8">CAPCUT 4K EDITING MASTERY</text>
+    <text x="48" y="220" fill="#cbd5e1" font-size="19" font-weight="600" font-family="'Plus Jakarta Sans', system-ui, sans-serif">Optical Flow • Auto Captions • Pro Curves</text>
+    <g transform="translate(48, 270)">
+      <circle cx="6" cy="6" r="4" fill="#f472b6" />
+      <text x="18" y="11" fill="#e2e8f0" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', system-ui, sans-serif">Tested &amp; 100% Free</text>
+      <circle cx="170" cy="6" r="4" fill="#f472b6" />
+      <text x="182" y="11" fill="#e2e8f0" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', system-ui, sans-serif">RCFE Framework</text>
+      <circle cx="340" cy="6" r="4" fill="#f472b6" />
+      <text x="352" y="11" fill="#e2e8f0" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', system-ui, sans-serif">2026 Edition</text>
+    </g>
+    <g transform="translate(48, 385)">
+      <text x="0" y="0" fill="rgba(255,255,255,0.7)" font-size="13" font-weight="800" font-family="'Plus Jakarta Sans', system-ui, sans-serif" letter-spacing="1">TECH TELUGU • CURATED BY SANTHOSH (@SANTHOSHOFFICIAL_09)</text>
+    </g>
+  </svg>
+        </div>
+        <div class="card-body">
+          <span style="font-size:11px;font-weight:800;color:#db2777">EDITING</span>
+          <h3 style="font-size:16px;font-weight:800;margin:6px 0">CapCut Video Editing Mastery (4K Export)</h3>
+          <span style="font-size:12px;color:var(--text-muted)">14 min read</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer style="background:#ffffff;border-top:1px solid #e2e8f0;padding:32px 20px;text-align:center;font-size:13px;color:#64748b">
+    © 2026 Tech Telugu • AI Guides &amp; Prompts
+  </footer>
+
+  <script>
+    function copySnippet(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      navigator.clipboard.writeText(el.textContent.trim()).then(() => {
+        alert("Prompt copied to clipboard! Paste into ChatGPT or Claude.");
+      });
     }
   </script>
 </body>
