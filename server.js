@@ -161,8 +161,8 @@ app.get("/download-capcut", (req, res) => {
   res.sendFile(path.join(__dirname, "download-capcut.html"));
 });
 
-app.get("/google-antigravity", (req, res) => {
-  res.sendFile(path.join(__dirname, "guides", "google-antigravity-prompt-to-app-guide.html"));
+app.get(["/google-antigravity", "/google-antigravity.html", "/google-antigravity-prompt-to-app-guide.html", "/guides/google-antigravity-prompt-to-app-guide.html", "/guides/google-antigravity.html"], (req, res) => {
+  res.sendFile(path.join(__dirname, "google-antigravity.html"));
 });
 
 app.get("/about", (req, res) => {

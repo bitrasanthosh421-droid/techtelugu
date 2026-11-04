@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://techtelugu.online/sitemap.xml
+Sitemap: https://mycoinrush.online/sitemap.xml
