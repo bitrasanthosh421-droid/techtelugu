@@ -5,14 +5,14 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5301014611783028" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Found &bull; Tech Telugu Hub</title>
+  <title>Resource Directory • Tech Telugu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #ffffff;
-      --card-bg: #f8fafc;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
       --card-border: #e2e8f0;
       --text-main: #0f172a;
       --text-muted: #64748b;
@@ -23,7 +23,7 @@
     body {
       background: var(--bg);
       color: var(--text-main);
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -32,55 +32,120 @@
       text-align: center;
     }
     .box {
-      max-width: 540px;
+      max-width: 620px;
       width: 100%;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 20px;
-      padding: 40px 28px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      padding: 40px 32px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
     }
     .icon { font-size: 54px; margin-bottom: 12px; }
-    h1 { font-size: 24px; font-weight: 900; margin-bottom: 8px; color: var(--text-main); }
+    h1 { font-size: 26px; font-weight: 900; margin-bottom: 8px; color: var(--text-main); letter-spacing: -0.4px; }
     p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 24px; }
-    .btn-row { display: flex; flex-direction: column; gap: 10px; }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 20px;
+    .btn-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .btn-card {
+      background: #f8fafc;
+      border: 1px solid var(--card-border);
+      padding: 12px 16px;
       border-radius: 10px;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
+      color: var(--text-main);
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
       transition: all 0.2s;
     }
-    .btn-primary { background: var(--accent); color: #fff; }
-    .btn-primary:hover { background: var(--accent-hover); }
-    .btn-secondary { background: #fff; color: var(--text-main); border: 1px solid var(--card-border); }
-    .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
-  </style>
-  <script>
-    // Smart auto-redirect for Antigravity or CapCut requests
-    const p = (window.location.pathname || "").toLowerCase();
-    if (p.includes("antigravity")) {
-      window.location.replace("index.html#section-student");
-    } else if (p.includes("capcut")) {
-      window.location.replace("download-capcut.html");
+    .btn-card:hover {
+      background: #ffffff;
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
     }
+    .btn-main {
+      background: var(--accent);
+      color: #ffffff;
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-size: 14.5px;
+      font-weight: 800;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      justify-content: center;
+    }
+    .btn-main:hover { background: var(--accent-hover); }
+    @media (max-width: 600px) { .btn-grid { grid-template-columns: 1fr; } }
+  </style>
+
+  <!-- Intelligent Smart Auto-Router for any misspelled, spaced, or moved guide URL -->
+  <script>
+    (function() {
+      var raw = (window.location.pathname || "") + (window.location.search || "");
+      var p = decodeURIComponent(raw).toLowerCase().replace(/[\s_+]+/g, '-');
+
+      if (p.includes("interactive") || p.includes("calculator") || p.includes("web-app")) {
+        window.location.replace("/building-interactive-web-apps.html");
+      } else if (p.includes("zero") || p.includes("chatgpt-vscode") || p.includes("vscode")) {
+        window.location.replace("/zero-code-web-development-chatgpt-vscode.html");
+      } else if (p.includes("python") || p.includes("scraping") || p.includes("automation")) {
+        window.location.replace("/python-automation-web-scraping.html");
+      } else if (p.includes("bot") || p.includes("persona") || p.includes("custom-ai")) {
+        window.location.replace("/custom-ai-bot-generation.html");
+      } else if (p.includes("troubleshoot") || p.includes("failure") || p.includes("hallucination") || p.includes("fix")) {
+        window.location.replace("/troubleshooting-ai-prompt-failures.html");
+      } else if (p.includes("reel") || p.includes("funnel") || p.includes("traffic") || p.includes("viral-reel")) {
+        window.location.replace("/viral-reel-funnel-website-traffic.html");
+      } else if (p.includes("car") || p.includes("kling") || p.includes("hypercar")) {
+        window.location.replace("/viral-ai-car-video-transformation.html");
+      } else if (p.includes("antigravity")) {
+        window.location.replace("/google-antigravity.html");
+      } else if (p.includes("prompt") || p.includes("masterclass") || p.includes("rcfe")) {
+        window.location.replace("/ai-prompt-engineering-masterclass.html");
+      } else if (p.includes("capcut") && p.includes("download")) {
+        window.location.replace("/download-capcut.html");
+      } else if (p.includes("capcut")) {
+        window.location.replace("/capcut-mobile-editing-guide.html");
+      } else if (p.includes("notion")) {
+        window.location.replace("/notion-productivity-system.html");
+      } else if (p.includes("security") || p.includes("privacy")) {
+        window.location.replace("/mobile-security-privacy-guide.html");
+      } else if (p.includes("best") || p.includes("tool")) {
+        window.location.replace("/best-ai-tools-2026.html");
+      }
+    })();
   </script>
 </head>
 <body>
   <div class="box">
-    <div class="icon">🚀</div>
-    <h1>Looking for Tech Telugu Resources?</h1>
-    <p>You can access our full Student AI Tools, Google Antigravity prompts, CapCut downloads, and curated web apps directly below:</p>
-    <div class="btn-row">
-      <a href="index.html" class="btn btn-primary">🏠 Open Tech Telugu Hub</a>
-      <a href="index.html#section-student" class="btn btn-secondary">🎓 Student Tools &amp; Video Classroom</a>
-      <a href="https://antigravity.google/" target="_blank" rel="noopener" class="btn btn-secondary">🚀 Launch Google Antigravity ↗</a>
+    <div class="icon">⚡</div>
+    <h1>Tech Telugu Masterclasses &amp; Tools</h1>
+    <p>Redirecting to your requested resource... If you are not redirected automatically, select your destination below:</p>
+    
+    <div class="btn-grid">
+      <a href="/viral-ai-car-video-transformation.html" class="btn-card">🏎️ Viral AI Car Video</a>
+      <a href="/ai-prompt-engineering-masterclass.html" class="btn-card">🤖 ChatGPT 50+ Prompts</a>
+      <a href="/google-antigravity.html" class="btn-card">🚀 Google Antigravity</a>
+      <a href="/capcut-mobile-editing-guide.html" class="btn-card">🎬 CapCut 4K Editing</a>
+      <a href="/zero-code-web-development-chatgpt-vscode.html" class="btn-card">💻 Zero-Code Web Dev</a>
+      <a href="/python-automation-web-scraping.html" class="btn-card">🐍 Python Automation</a>
+      <a href="/custom-ai-bot-generation.html" class="btn-card">🤖 Custom AI Bots</a>
+      <a href="/troubleshooting-ai-prompt-failures.html" class="btn-card">🔍 Prompt Troubleshooting</a>
+      <a href="/viral-reel-funnel-website-traffic.html" class="btn-card">📈 Viral Reel Funnels</a>
+      <a href="/building-interactive-web-apps.html" class="btn-card">🛠️ Interactive Web Apps</a>
     </div>
+
+    <a href="/index.html" class="btn-main">🏠 Open Tech Telugu Homepage</a>
   </div>
 </body>
 </html>
